@@ -30,6 +30,11 @@ window.addEventListener("scroll", () => {
         }
     });
 });
+// end of nav bar active while scrolling
+
+
+
+
 
 
 // Toggle dark mode functionality

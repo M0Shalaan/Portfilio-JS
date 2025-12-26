@@ -3795,6 +3795,8 @@ textarea:focus-visible,
     }
 }
 
+
+/* Dark mode styles */
 .dark-mode {
     background-color: #121212;
     color: #e0e0e0;
