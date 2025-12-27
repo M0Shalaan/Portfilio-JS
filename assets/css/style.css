@@ -3802,30 +3802,3 @@ textarea:focus-visible,
     color: #e0e0e0;
 }
 
-
-/* Testimonial Cards */
-#testimonials-carousel {
-    display: flex;
-    gap: 1rem;
-    /* المسافة بين الكروت */
-    overflow: hidden;
-}
-
-.testimonial-card {
-    flex: 0 0 calc(100% / 3 - 1rem);
-    /* 3 كروت ظاهرين مع الفجوة */
-}
-
-@media (max-width: 1024px) {
-    .testimonial-card {
-        flex: 0 0 calc(50% - 1rem);
-        /* 2 كارت للتابلت */
-    }
-}
-
-@media (max-width: 768px) {
-    .testimonial-card {
-        flex: 0 0 100%;
-        /* كارت واحد للموبايل */
-    }
-}

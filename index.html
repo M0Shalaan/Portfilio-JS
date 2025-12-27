@@ -73,50 +73,102 @@
     class="skip-link sr-only focus:not-sr-only focus:absolute focus:top-4 focus:right-4 focus:z-[100] focus:bg-primary focus:text-white focus:px-4 focus:py-2 focus:rounded-lg">
     تخطي إلى المحتوى الرئيسي
   </a>
+  <nav id="header" role="navigation" aria-label="التنقل الرئيسي" class="fixed top-0 left-0 right-0 z-50
+         bg-white/95 dark:bg-slate-950/95 backdrop-blur-md
+         border-b border-slate-200 dark:border-slate-800
+         shadow-sm dark:shadow-none">
+    <div class="container mx-auto px-4 md:px-8 py-5 flex items-center">
 
-  <nav id="header" role="navigation" aria-label="التنقل الرئيسي"
-    class="fixed top-0 left-0 right-0 bg-white/95 dark:bg-slate-950/95 backdrop-blur-md z-50 border-b border-slate-200 dark:border-slate-800 shadow-sm dark:shadow-none">
-    <div class="container mx-auto px-4 md:px-8 py-5 flex justify-between items-center">
+      <!-- Logo -->
       <div class="flex items-center gap-3">
-        <div class="w-12 h-12 bg-linear-to-br from-primary to-secondary rounded-lg flex items-center justify-center"
-          aria-hidden="true">
+        <div class="w-12 h-12 bg-linear-to-br from-primary to-secondary
+               rounded-lg flex items-center justify-center" aria-hidden="true">
           <i class="fa-solid fa-code text-white text-xl"></i>
         </div>
-        <div class="text-2xl font-bold bg-linear-to-r from-primary to-secondary bg-clip-text text-transparent">
+
+        <div class="text-2xl font-bold bg-linear-to-r from-primary to-secondary
+               bg-clip-text text-transparent">
           أحمد حسن
         </div>
       </div>
-      <div class="nav-links  flex gap-8 items-center" role="menubar">
-        <a class=" text-slate-600 dark:text-slate-300 hover:text-primary transition-colors duration-300 text-lg"
-          href="#hero-section" role="menuitem">الرئيسية</a>
-        <a class="text-slate-600 dark:text-slate-300 hover:text-primary transition-colors duration-300 text-lg"
-          href="#about" role="menuitem">عني</a>
-        <a class="text-slate-600 dark:text-slate-300 hover:text-primary transition-colors duration-300 text-lg"
-          href="#portfolio" role="menuitem">الأعمال</a>
-        <a class="text-slate-600 dark:text-slate-300 hover:text-primary transition-colors duration-300 text-lg"
-          href="#experience" role="menuitem">الخبرة</a>
-        <a class="text-slate-600 dark:text-slate-300 hover:text-primary transition-colors duration-300 text-lg"
-          href="#testimonials" role="menuitem">التوصيات</a>
-        <a class="text-slate-600 dark:text-slate-300 hover:text-primary transition-colors duration-300 text-lg"
-          href="#contact" role="menuitem">تواصل</a>
-        <!-- Theme Toggle Button -->
-        <button theme-toggle-button onclick="toggleDarkMode()"
-          class="relative w-16 h-8 bg-slate-200 dark:bg-slate-700 rounded-full transition-all duration-300 hover:ring-2 hover:ring-primary/50 focus:outline-none focus-visible:ring-2 focus-visible:ring-primary"
-          aria-label="تبديل الوضع الداكن" aria-pressed="false" type="button">
-          <!-- Toggle Circle with Icon -->
-          <span
-            class="theme-toggle-circle absolute top-1 left-1 w-6 h-6 bg-white dark:bg-slate-800 rounded-full shadow-md flex items-center justify-center transition-transform duration-300 dark:translate-x-8">
-            <!-- Sun Icon (visible in light mode) -->
-            <i class="fa-solid fa-sun text-amber-500 text-sm transition-all duration-300 dark:opacity-0 dark:rotate-90 dark:scale-0"
-              aria-hidden="true"></i>
-            <!-- Moon Icon (visible in dark mode) -->
-            <i class="fa-solid fa-moon text-indigo-400 text-sm absolute transition-all duration-300 opacity-0 -rotate-90 scale-0 dark:opacity-100 dark:rotate-0 dark:scale-100"
-              aria-hidden="true"></i>
+
+      <!-- Spacer -->
+      <div class="flex-1"></div>
+
+      <!-- Desktop Navigation -->
+      <div class="nav-links flex gap-8 items-center max-md:hidden" role="menubar">
+        <a href="#hero-section" role="menuitem"
+          class="text-slate-600 dark:text-slate-300 hover:text-primary transition-colors text-lg">
+          الرئيسية
+        </a>
+        <a href="#about" role="menuitem"
+          class="text-slate-600 dark:text-slate-300 hover:text-primary transition-colors text-lg">
+          عني
+        </a>
+        <a href="#portfolio" role="menuitem"
+          class="text-slate-600 dark:text-slate-300 hover:text-primary transition-colors text-lg">
+          الأعمال
+        </a>
+        <a href="#experience" role="menuitem"
+          class="text-slate-600 dark:text-slate-300 hover:text-primary transition-colors text-lg">
+          الخبرة
+        </a>
+        <a href="#testimonials" role="menuitem"
+          class="text-slate-600 dark:text-slate-300 hover:text-primary transition-colors text-lg">
+          التوصيات
+        </a>
+        <a href="#contact" role="menuitem"
+          class="text-slate-600 dark:text-slate-300 hover:text-primary transition-colors text-lg">
+          تواصل
+        </a>
+
+        <!-- Theme Toggle (Desktop) -->
+        <button theme-toggle-button onclick="toggleDarkMode()" aria-label="تبديل الوضع الداكن" aria-pressed="false"
+          type="button" class="relative w-16 h-8 bg-slate-200 dark:bg-slate-700
+               rounded-full transition-all duration-300
+               hover:ring-2 hover:ring-primary/50
+               focus:outline-none focus-visible:ring-2 focus-visible:ring-primary">
+          <span class="absolute top-1 left-1 w-6 h-6
+                 bg-white dark:bg-slate-800 rounded-full shadow-md
+                 flex items-center justify-center
+                 transition-transform duration-300 dark:translate-x-8">
+            <i class="fa-solid fa-sun text-amber-500 text-sm
+                    transition-all duration-300
+                    dark:opacity-0 dark:rotate-90 dark:scale-0" aria-hidden="true"></i>
+
+            <i class="fa-solid fa-moon text-indigo-400 text-sm absolute
+                    transition-all duration-300 opacity-0 -rotate-90 scale-0
+                    dark:opacity-100 dark:rotate-0 dark:scale-100" aria-hidden="true"></i>
           </span>
         </button>
       </div>
+
+      <!-- Hamburger (Mobile Only) -->
+      <button id="nav-toggle" class="md:hidden text-2xl text-slate-700 dark:text-slate-200" aria-label="فتح القائمة"
+        aria-expanded="false">
+        <i class="fa-solid fa-bars"></i>
+      </button>
     </div>
   </nav>
+
+  <!-- Mobile Menu -->
+  <div id="mobile-menu" class="hidden md:hidden fixed top-[76px] left-0 right-0 z-40
+         bg-white dark:bg-slate-950
+         border-t border-slate-200 dark:border-slate-800
+         px-6 py-6 space-y-6 shadow-lg">
+    <a href="#hero-section" class="block">الرئيسية</a>
+    <a href="#about" class="block">عني</a>
+    <a href="#portfolio" class="block">الأعمال</a>
+    <a href="#experience" class="block">الخبرة</a>
+    <a href="#testimonials" class="block">التوصيات</a>
+    <a href="#contact" class="block">تواصل</a>
+
+    <!-- Theme Toggle (Mobile) -->
+    <button theme-toggle-button onclick="toggleDarkMode()" class="mt-4">
+      تبديل الوضع
+    </button>
+  </div>
+
 
   <main id="main-content">
 
@@ -1967,7 +2019,7 @@
       </div>
 
       <!-- Scrollable Content -->
-       
+
       <div class="flex-1 overflow-y-auto p-6 space-y-8">
         <!-- Fonts Section -->
         <div>
