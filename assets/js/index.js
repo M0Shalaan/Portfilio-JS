@@ -27,39 +27,6 @@ window.addEventListener("scroll", () => {
     });
 });
 
-
-// ======================================================
-// RESPONSIVE NAVBAR TOGGLE
-// ======================================================
-const navToggle = document.getElementById("nav-toggle");
-const mobileMenu = document.getElementById("mobile-menu");
-
-// Initialize menu hidden
-mobileMenu.classList.add("hidden", "opacity-0", "translate-y-[-20px]");
-
-navToggle.addEventListener("click", () => {
-    const isHidden = mobileMenu.classList.contains("hidden");
-
-    if (isHidden) {
-        // Show menu with animation
-        mobileMenu.classList.remove("hidden");
-        requestAnimationFrame(() => {
-            mobileMenu.classList.remove("translate-y-[-20px]", "opacity-0");
-        });
-    } else {
-        // Hide menu with animation
-        mobileMenu.classList.add("translate-y-[-20px]", "opacity-0");
-        // Wait for transition before hiding completely
-        mobileMenu.addEventListener("transitionend", function hide() {
-            mobileMenu.classList.add("hidden");
-            mobileMenu.removeEventListener("transitionend", hide);
-        });
-    }
-
-    // Update aria-expanded
-    navToggle.setAttribute("aria-expanded", isHidden);
-});
-
 // ======================================================
 // FILTER FUNCTIONALITY FOR PROJECTS
 // ======================================================
