@@ -117,6 +117,7 @@ function updateDots() {
 }
 
 // Move carousel
+// There is bug in display 6 cards it display only 3 and tried so many times
 function slideCarousel(animate = true) {
   index = Math.max(0, Math.min(index, getMaxIndex()));
 
